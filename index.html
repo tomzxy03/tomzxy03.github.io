@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trịnh Phúc Đạt</title>
+    <link rel="icon" type="image/x-icon" href="/Band/assets/img/Icon_page/duck.png">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <style>
+        /* reset css*/
+
+/* 
+    1. Từ ngoài vào trong
+    2. Tự trên xuống dưới
+    3. Tổng quan đến chi tiết
+
+*/
+
+/* 
+    1. Vị trí
+    2. Kích thước
+    3. Màu sắc
+    4. Kiểu dáng ( Kiểu chữ, hình tròn,...)
+*/
+/*  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.text-while{
+    color: #fff !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.btn{
+    padding: 11px 16px;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.btn:hover{
+    background-color: rgba(255, 61, 60, 0.7);
+    color: #000;
+    cursor: pointer;
+}
+.pull-right{
+    float: right !important; 
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-3{
+    width: 33.33333%;
+}
+.col-2{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+/* Main */
+#wrapper{
+
+}
+
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav > li:hover > a , #nav .subnav li:hover a{
+    color: #000;
+    background-color: rgba(255, 99, 71, 1);
+}
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+    
+}
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+    
+}
+#header .search-btn:hover{
+    background-color: rgba(255, 61, 60, 0.7);
+    cursor: pointer; 
+}
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+    
+
+}
+#slide{
+    margin-top: 46px;
+    padding-top: 50%;
+    position: relative;
+    background-image: url('/Band/assets/img/slider/IU.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    
+
+}
+#slide .text-content{
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    
+    
+}
+#slide .text-heading{
+    font-size: 24px;
+    font-weight: 500;
+}
+#slide .text-description{
+    font-size: 15px;
+}
+#content{
+    
+}
+#content .content-section{
+    width: 800px;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+#content .section-subheading{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .about-text{
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .member-name{
+    font-size: 15px;
+   
+}
+#content .members-list{
+    margin-top: 48px;
+    margin-left: 48px;
+    overflow: hidden;
+}
+
+#content .member-avatar{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+#content .ti-heart{
+    color: #f44336;
+    
+}
+/* Tour section */
+
+.tour-section{
+    background-color: #000;
+}
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+
+}
+.tickets-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom:1px solid #ddd ;
+}
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quantity{
+    background-color: #000;
+    color: #fff;
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* place */
+.places-list{
+    margin-top: 32px;
+    
+}
+
+
+.place-img{
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: #fff; 
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+
+
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form{
+    font-size: 15px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+.map-section img{
+    width: 100%;
+}
+/* Footer section */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 30px;
+}
+#footer .social-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    
+}
+#footer .coppy-right a:hover,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4); ;
+}
+#footer .coppy-right{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .coppy-right a{
+    color: rgba(0, 0, 0, 0.6);
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+.modal .modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFaceIn ease .5s;
+}
+.modal .modal-header{
+    background-color: rgb(14, 99, 99);
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal .modal-header-icon .ti-bag{
+    margin-right: 16px;
+    
+}
+.modal .modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 1;
+}
+.modal .modal-close:hover{
+    opacity: 0.7;
+}
+.modal .modal-body{
+    padding: 16px;
+}
+.modal .modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal .modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+.modal .but-tickets{
+    background-color: rgb(14, 99, 99);
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+}
+.modal .but-tickets:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.modal .modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+.modal .modal-footer a{
+    color: #2196F3;
+}
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-pay{
+    background-color:rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+/* .modal-pay.open_pay{
+    display: flex;
+} */
+.modal-pay .modal-pay-container{
+    background-color: #fff;
+    width: 300px;
+    max-width: calc(100% - 60px);
+    min-height: 150px;
+    position: relative;
+    animation: modalFaceIn ease .5s;
+}
+.modal-pay .modal-pay-close{
+    top: 0;
+    right: 0;
+    position: absolute;
+    color: #000;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 1;
+
+}
+.modal-pay .modal-pay-header{
+    height: 32px;
+}
+.modal-pay .modal-content{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(99, 225, 225);
+    height: 118px;
+}
+.modal-pay .modal-content .ti-check{
+    margin-left: 10px;
+}
+.modal-pay .modal-content .modal-pay-button{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background-color:  rgb(99, 225, 225);;
+}
+.modal-pay .modal-content .modal-pay-button:hover{
+    opacity: 0.7;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="">
+                        More
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- End: Nav-->
+
+            <!-- Begin: Search button-->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+
+            </div>
+            <!-- End: Search button-->
+
+        </div>
+        <div id="slide">
+            <div class="text-content">
+                <div class="text-heading">Viet Nam</div>
+                <div class="text-description">Thank you, Viet Nam - A night we won't forget.</div>
+            </div>
+        </div>
+        <div id="content">
+            <!-- About section-->
+            <div id="band"class="content-section">
+                <h2 class="section-heading">THE BAND</h2>
+                <p class="section-subheading">We love music</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="row members-list">
+                    <div class="col col-3 text-center">
+                        <p class="member-name ti-heart">IU</p>
+                        <img src="/Band/assets/img/img-content/iu.jpeg" alt="IU" class="member-avatar">
+
+                    </div>
+                    <div class="col col-3 text-center">
+                        <p class="member-name ti-heart" >IU</p>
+                        <img src="/Band/assets/img/img-content/iu.jpeg" alt="IU" class="member-avatar">
+
+                    </div>
+                    <div class="col col-3 text-center">
+                        <p class="member-name ti-heart">IU</p>
+                        <img src="/Band/assets/img/img-content/iu.jpeg" alt="IU" class="member-avatar">
+
+                    </div>
+                
+                </div>
+            </div>
+            <!--Tour section-->
+            <div id="tour" class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-while">TOUR DATES</h2>
+                    <p class="section-subheading text-while">Remember to book your tickets!</p>
+                    <ul class="tickets-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>Octorber <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+                    <!--places-->
+                    <div class="row places-list">
+                        <div class="col col-3">
+                            <img src="/Band/assets/img/img-content/iu_1.jpeg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                            </div>                        
+                        </div>
+
+                        <div class=" col col-3">
+                            <img src="/Band/assets/img/img-content/iu.jpeg" alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Paris</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo..</p>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class=" col col-3">
+                            <img src="/Band/assets/img/img-content/imagess (1).jpeg" alt=" San Francisco" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">San Francisco </h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo..</p>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Begin:Contact section-->
+            <div id="contact" class="content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-subheading">Fan? Drop a note!</p>
+                
+                <div class="row context-content">
+                    <div class="col col-2 contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago,US</p>
+                        <p><i class="ti-mobile"></i>Phone:+8423423423</p>
+                        <p><i class="ti-email"></i>Email:abc@gmail.com</p>
+                    </div>
+                    <div class="col col-2 contact-form">
+                        <form action="">
+                            <div class="row ">
+                                <div class="col col-2">
+                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                </div>
+                                <div class="col col-2">
+                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                </div>
+                            </div>
+                            <input class="btn pull-right mt-16"type="submit" value="SEND">
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!--End:Contact section-->
+            <div class="map-section">
+                <img src="/Band/assets/img/map/Screenshot 2023-09-11 235157.png" alt="Lâu ca">
+            </div>
+        </div>
+        <div id="footer">
+            <div class="social-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+            </div>
+            <p class="coppy-right">Powered by <a href="">w3.css</a></p>
+        </div>
+    </div>
+    <div class="modal js-modal open">
+            <div class="modal-container js-modalContainer">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                <header class="modal-header">
+                    <i class="modal-header-icon ti-bag"></i>
+                    Tickets
+                </header>
+                <div class="modal-body">
+                    <label for="quantity" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                        <input id="quantity"type="text" class="modal-input" placeholder="How many?" required>
+                        <label for="email" class="modal-label">
+                            <i class="ti-user"></i>
+                            Send to
+                        </label>
+                        <input id="email"type="email" class="modal-input" placeholder="Enter Email..." required>
+                    
+                    <button class="but-tickets js-accept">
+                        Pay <i class="ti-check"></i>
+                    </button>
+                </div>
+                <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="">help?</a></p>
+                </footer>
+            </div>
+    </div>
+    <div class="modal-pay js-modal-pay open_pay">
+        <div class="modal-pay-container">
+            <div class="modal-pay-close js-modal-pay-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-pay-header"></header>
+            <div class="modal-content">
+                Paied 
+                <i class="ti-check"></i>
+                <button class="modal-pay-button js-pay-ok-close">OK</button>
+            </div>
+            
+        </div>
+    </div>
+        <script>
+            //modal --
+            const buyBtns = document.querySelectorAll('.js-buy-ticket') // lấy 3 ticket
+            const modal = document.querySelector('.js-modal')// lấy nút modal
+            const modalContainer = document.querySelector('.js-modalContainer')
+            const modal_close = document.querySelector('.js-modal-close');
+            const modal_accept =document.querySelector('.js-accept')
+            // modal pay--
+            const modal_pay_close = document.querySelector('.js-modal-pay-close')
+            const modal_pay= document.querySelector('.js-modal-pay')
+            const modal_Ok_close=document.querySelector('.js-pay-ok-close')
+            function showBuyTickets(){
+            modal.classList.add('open') // modal open
+            }
+            function hideBuyTickets(){
+            modal.classList.remove('open') // modal exit
+            }
+            function PayBuyTicketsOpen(){
+                modal_pay.classList.add('open_pay')
+            }
+            function PayBuyTicketsExit(){
+                modal_pay.classList.remove('open_pay')
+            }
+            for(const buyBtn of buyBtns){
+                buyBtn.addEventListener('click',showBuyTickets )
+            }
+            modal_close.addEventListener('click',hideBuyTickets)
+            modal.addEventListener('click',hideBuyTickets,PayBuyTicketsOpen)
+            modal_accept.addEventListener('click',hideBuyTickets)
+            modalContainer.addEventListener('click', function(event){
+                event.stopPropagation()
+            })
+            modal_accept.addEventListener('click',PayBuyTicketsOpen)
+            modal_pay_close.addEventListener('click',PayBuyTicketsExit)
+            modal_Ok_close.addEventListener('click',PayBuyTicketsExit)
+        </script>
+</body>
+</html>
